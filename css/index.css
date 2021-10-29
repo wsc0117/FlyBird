@@ -1,0 +1,97 @@
+/* 根据b站软帝学院2020Web前端经典小游戏制作--飞翔的小鸟 */
+/* 如果涉及侵权，请联系wangready@163.com删除 */
+* {
+  margin: 0;
+  padding: 0;
+}
+#container {
+  width: 350px;
+  height: 480px;
+  margin: 50px auto;
+  background: url("../img/bg.jpg") no-repeat;
+  background-size: 100% 100%;
+  /* 父相子绝 */
+  position: relative;
+  overflow: hidden;
+}
+#head {
+  position: absolute;
+  left: 50px;
+  top: 150px;
+}
+#head span {
+  width: 40px;
+  height: 26px;
+  display: inline-block;
+  background: url("../img/bird0.png");
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+#score {
+  position: absolute;
+  left: 50%;
+  top: 40px;
+  /* 水平绝对居中 */
+  transform: translateX(-50%);
+  font-size: 45px;
+  z-index: 9;
+}
+#menu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 60%;
+}
+#bird {
+  display: none;
+  position: absolute;
+  left: 30px;
+  top: 40px;
+  z-index: 9;
+}
+#ductWrap li {
+  list-style: none;
+  width: 62px;
+  height: 424px;
+  position: absolute;
+  left: 300px;
+  top: 0;
+  overflow: hidden;
+}
+.duct_up {
+  background: url("../img/up_mod.png");
+  background-repeat: repeat-y;
+  height: 120px;
+  position: relative;
+}
+.duct_up img {
+  position: absolute;
+  bottom: 0;
+}
+.duct_down {
+  background: url("../img/down_mod.png");
+  background-repeat: repeat-y;
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.duct_down img {
+  position: absolute;
+  top: 0;
+}
+#over {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 200px;
+  display: none;
+  z-index: 9;
+}
+/* 小鸟坠地样式 */
+.die {
+  top: 395px !important;
+  z-index: 9;
+  transition: 0.5s;
+}
